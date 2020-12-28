@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.login {
+  padding: 100px;
+}
+
+.login form {
+  background: #1fff93;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #1fff93;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.login form input {
+  padding: 10px 0;
+  border: 1px solid #1fff93;
+  border-radius: 5px;
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+}
+
+.login form input:focus {
+  outline: none;
+}
+
+.button {
+  background: #53ed96;
+  font-weight: bold;
+}
+
+input.button:hover {
+  background: #3bcc7a;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.sign-up a {
+  display: block;
+  background: #53ed96;
+  width: 30%;
+  margin: 0 auto;
+  padding: 8px 0;
+  border: 1px solid #53ed96;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 13.33px;
+  font-weight: bold;
+  font-family: arial;
+}
+
