@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,9 +9,14 @@
 <body>
   <div class="container">
     <div class="login">
+      <div class="login-error"><?php echo ($_SESSION['loginError'] ?? ''); ?></div>
       <form action="config/signInFormHandler.php" method="POST">
-        <input type="text" name="username" placeholder="Username (National Code)">
+        <input type="text" name="username" placeholder="Username (National Code)" value="<?php if(isset($_SESSION['inputUsername'])) {echo htmlspecialchars($_SESSION['inputUsername']);} ?>">
+        <div class="red-text"><?php echo ($_SESSION['inputUsernameError'] ?? ''); ?></div>
+
         <input type="password" name="password" placeholder="Password">
+        <div class="red-text"><?php echo ($_SESSION['inputPasswordError'] ?? ''); ?></div>
+
         <input class="button" type="submit" name="sign-in" value="Sign In">
       </form>
       <div class="sign-up">
@@ -20,3 +27,5 @@
   </div>
 </body>
 </html>
+
+<?php session_unset(); ?>

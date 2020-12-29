@@ -2,12 +2,23 @@
   box-sizing: border-box;
 }
 
+body {
+  font-weight: bold !important;
+  font-family: arial !important;
+}
+
 .red-text {
   color: red;
   text-align: left;
   padding-left: 6%;
   font-weight: bold;
   font-size: 12px;
+}
+
+.login-error {
+  padding: 10px 0;
+  color: red;
+  text-align: center;
 }
 
 .login {
