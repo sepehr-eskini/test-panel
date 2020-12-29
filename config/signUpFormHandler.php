@@ -64,7 +64,15 @@
 		if(array_filter($errors)) {
 			header('Location: ../signUp.php');
 		} else {
+			$stmt = $db->prepare('INSERT INTO users (firstname, lastname, email, nationalcode, password) VALUES (:firstname, :lastname, :email, :nationalcode, :password)');
+			$stmt->bindParam(':firstname', $_SESSION['firstName']);
+			$stmt->bindParam(':lastname', $_SESSION['lastName']);
+			$stmt->bindParam(':email', $_SESSION['email']);
+			$stmt->bindParam(':nationalcode', $_SESSION['nationalCode']);
+			$stmt->bindParam(':password', $_SESSION['password']);
+			$stmt->execute();
 			header('Location: ../login.php');
+			session_unset();
 		}
 	}
 

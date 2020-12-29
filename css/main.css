@@ -49,6 +49,9 @@ input.button:hover {
 
 .sign-up {
   text-align: center;
+  font-size: 13.33px;
+  font-weight: bold;
+  font-family: arial;
 }
 
 .sign-up a {
@@ -61,8 +64,4 @@ input.button:hover {
   border-radius: 5px;
   text-decoration: none;
   color: black;
-  font-size: 13.33px;
-  font-weight: bold;
-  font-family: arial;
 }
-

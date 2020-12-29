@@ -8,7 +8,7 @@
   <div class="container">
     <div class="login">
       <form action="config/signInFormHandler.php" method="POST">
-        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="username" placeholder="Username (National Code)">
         <input type="password" name="password" placeholder="Password">
         <input class="button" type="submit" name="sign-in" value="Sign In">
       </form>
