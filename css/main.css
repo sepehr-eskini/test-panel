@@ -7,6 +7,57 @@ body {
   font-family: arial !important;
 }
 
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.container {
+  width: 100%;
+}
+
+.section {
+  padding: 20px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
 .red-text {
   color: red;
   text-align: left;
@@ -75,4 +126,91 @@ input.button:hover {
   border-radius: 5px;
   text-decoration: none;
   color: black;
+}
+
+.panel-home {
+  background: #1fff93;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.panel-home ul li.left {
+  line-height: 38px;
+}
+
+.panel-home ul li.right {
+  padding-left: 10px;
+}
+
+.panel-home ul a {
+  display: inline-block;
+  padding: 10px;
+  background: #53ed96;
+  border-radius: 10px;
+}
+
+.panel-home ul a:hover {
+  border: 1px solid black;
+  padding: 9px;
+}
+
+.nav {
+  background: #1fff93;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.active {
+  background: #53ed96;
+}
+
+.nav ul li {
+  padding: 7px 0;
+  border-radius: 10px;
+}
+
+.nav ul li a {
+  display: block;
+  padding: 5px 10px;
+}
+
+.main-section {
+  padding: 20px;
+  padding-right: 0;
+  padding-top: 0;
+  border-radius: 10px;
+}
+
+.profile-section {
+  background: #d5ffd1;
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.profile-section ul li {
+  padding: 5px 0;
+  padding-right: 10px;
+}
+
+.profile-section ul li a {
+  padding: 10px;
+  display: inline-block;
+  background: #53ed96;
+  border-radius: 10px;
+}
+
+.profile-section ul li input {
+  border: 1px solid black;
+  line-height: 14px;
+}
+
+.profile-section ul li input[type="Submit"] {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: arial;
+  padding: 10px;
+  line-height: 18px;
+  background: #53ed96;
+  border: none;
+  border-radius: 10px;
 }

@@ -28,4 +28,9 @@
 </body>
 </html>
 
-<?php session_unset(); ?>
+<?php
+  unset($_SESSION['inputUsername']);
+  unset($_SESSION['inputPassword']);
+  unset($_SESSION['inputUsernameError']);
+  unset($_SESSION['inputUsernameError']);
+?>
