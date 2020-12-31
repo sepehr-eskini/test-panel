@@ -192,24 +192,25 @@ input.button:hover {
   padding: 20px;
 }
 
-.profile-section ul li {
+.profile-section ul li, .bankAccounts-section ul li {
   padding: 5px 0;
   padding-right: 10px;
 }
 
-.profile-section ul li a {
+.profile-section ul li a, .button, .bankAccounts-section ul li a{
   padding: 10px;
   display: inline-block;
   background: #53ed96;
   border-radius: 10px;
 }
 
-.profile-section ul li input {
+.profile-section ul li input, .bankAccounts-section ul li input {
   border: 1px solid black;
   line-height: 14px;
 }
 
-.profile-section ul li input[type="Submit"] {
+.profile-section ul li input[type="Submit"], .bankAccounts-section ul li input[type="Submit"]  {
+  cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   font-family: arial;
@@ -218,4 +219,35 @@ input.button:hover {
   background: #53ed96;
   border: none;
   border-radius: 10px;
+}
+
+.bankAccounts-section {
+  background: #d5ffd1;
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.bankAccounts-section table, .bankAccounts-section th, .bankAccounts-section tr, .bankAccounts-section td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+.bankAccounts-section table {
+  margin-top: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bankAccounts-section table th {
+  background: #1FFF93;
+}
+
+.button {
+  margin-bottom: 5px;
+}
+
+.not-found {
+  padding: 10px;
 }
