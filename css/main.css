@@ -66,6 +66,11 @@ a {
   font-size: 12px;
 }
 
+.edit-error {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
 .login-error {
   padding: 10px 0;
   color: red;

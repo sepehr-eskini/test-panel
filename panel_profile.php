@@ -17,7 +17,7 @@
 								<li>National Code: <?php echo htmlspecialchars($_SESSION['userNationalCode']); ?></li>
 								<li>Email: <?php echo htmlspecialchars($_SESSION['userEmail']); ?></li>
 								<li>Registration Date: <?php echo htmlspecialchars($_SESSION['userRegisterTs']); ?></li>
-								<li><a href="panel_profile_edit.php">Edit Profile</a></li>
+								<li><a href="panel_profileEdit.php">Edit Profile</a></li>
 							</ul>
 						</div>
 					</div>
