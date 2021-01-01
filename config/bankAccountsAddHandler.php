@@ -13,12 +13,14 @@
 		$stmt->execute();
 		$userBankAccountsResult = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		// First name validation
+		// Bank account number validation
 		if(empty($_SESSION['bankAccountNumberAdd'])) {
 			$_SESSION['bankAccountNumberAddError'] = 'Enter your bank account number';
 		} else if(!preg_match('/^[0-9]{11,}$/', $_SESSION['bankAccountNumberAdd'])) {
 			$_SESSION['bankAccountNumberAddError'] = 'Your bank account number must be at least 11 digits';
 		}
+
+		// Duplicate bankName-bankAccountNumber validation
 		foreach ($userBankAccountsResult as $ubar) {
 			if($ubar['bank_id'] == $_SESSION['bankIdAdd'] && $ubar['bank_account_number'] == $_SESSION['bankAccountNumberAdd']) {
 				$_SESSION['bankAccountNumberAddError'] = 'Bank account Exists';
