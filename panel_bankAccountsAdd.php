@@ -48,5 +48,9 @@
 	</div>
 
 	<?php include 'template/footer.php'; ?>
+	<?php
+	  unset($_SESSION['bankAccountNumberAdd']);
+	  unset($_SESSION['bankAccountNumberAddError']);
+	?>
 
 </html>

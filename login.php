@@ -26,7 +26,6 @@
     </div>
   </div>
 </body>
-</html>
 
 <?php
   unset($_SESSION['inputUsername']);
@@ -34,3 +33,6 @@
   unset($_SESSION['inputUsernameError']);
   unset($_SESSION['inputUsernameError']);
 ?>
+
+</html>
+

@@ -35,6 +35,7 @@
 					$_SESSION['userNationalCode'] = $result['nationalcode'];
 					$_SESSION['userPassword'] = $result['password'];
 					$_SESSION['userRegisterTs'] = $result['register_ts'];
+					$_SESSION['userAuthenticated'] = $result['id']; 
 					header('Location: ../panel_profile.php');
 				} else {
 					$_SESSION['loginError'] = 'Incorrect password';

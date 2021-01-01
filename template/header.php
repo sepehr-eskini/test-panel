@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+
+	session_start(); 
+	include 'config/userAuthentication.php';
+
+?>
 
 <head>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
@@ -9,7 +14,7 @@
 		<div class="section">
 			<div class="panel-home">
 				<ul>
-					<li class="right"><a href="login.php">Log Out</a></li>
+					<li class="right"><a href="config/logOutHandler.php">Log Out</a></li>
 					<li class="right"><a href="#">Change Password</a></li>
 					<li class="left">User: <?php echo htmlspecialchars($_SESSION['userFirstname']) . ' ' . htmlspecialchars($_SESSION['userLastname']); ?></li>
 			</ul>
