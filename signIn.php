@@ -5,6 +5,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="script/main.js"></script>
   <title>Login</title>
 </head>
 <body>
@@ -15,8 +16,8 @@
         <input type="text" name="username" placeholder="Username (National Code)" value="<?php if(isset($_SESSION['inputUsername'])) {echo htmlspecialchars($_SESSION['inputUsername']);} ?>">
         <div class="red-text"><?php echo ($_SESSION['inputUsernameError'] ?? ''); ?></div>
 
-        <input id="show-password" type="password" name="password" placeholder="Password">
-        <i id="eye-icon-big" class="fa fa-eye eye-icon"></i>
+        <input class="show-password" type="password" name="password" placeholder="Password">
+        <i class="fa fa-eye eye-icon-big"></i>
         <div class="red-text"><?php echo ($_SESSION['inputPasswordError'] ?? ''); ?></div>
 
         <select name="userType">

@@ -37,6 +37,12 @@
 					$_SESSION['userPassword'] = $result['password'];
 					$_SESSION['userRegisterTs'] = $result['register_ts'];
 					$_SESSION['userAuthenticated'] = $result['id']; 
+
+					unset($_SESSION['inputUsername']);
+					unset($_SESSION['inputPassword']);
+					unset($_SESSION['inputUsernameError']);
+					unset($_SESSION['inputPasswordError']);
+					unset($_SESSION['loginError']);
 					header('Location: ../panel_profile.php');
 				} else {
 					$_SESSION['loginError'] = 'Incorrect password';

@@ -79,11 +79,12 @@ a {
 
 .login {
   padding: 80px;
+  padding-top: 20px;
 }
 
 .login form {
   background: #1fff93;
-  width: 100%;
+  width: 40%;
   margin: 0 auto;
   padding: 10px 0;
   border: 1px solid #1fff93;
@@ -266,15 +267,28 @@ i.edit-icon {
   color: black;
 }
 
-#show-password {
-  display: inline-block;
+.show-password {
+  display: inline-block !important;
 }
 
-i.eye-icon {
+i.eye-icon-big {
   cursor: pointer;
   margin-left: -30px;
   position: absolute;
   line-height: 57px;
   font-size: 20px;
   color: black;
+}
+
+i.eye-icon-small {
+  cursor: pointer;
+  margin-left: -30px;
+  position: absolute;
+  line-height: 29px;
+  font-size: 14px;
+  color: black;
+}
+
+i.fa-eye-slash {
+  color: red;
 }

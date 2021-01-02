@@ -14,7 +14,8 @@
 						<div class="profile-section">
 							<form action="config/changePasswordHandler.php" method="POST">
 								<ul>
-									<li>Current Password: <input type="password" name="userCurrentPassword"></li>
+									<li class="show-password">Current Password: <input type="password" name="userCurrentPassword"></li>
+									<i class="fa fa-eye eye-icon-small"></i>
 									<div class="red-text edit-error">
 										<?php 
 											if(isset($_SESSION['userCurrentPasswordError'])) {
@@ -24,7 +25,8 @@
 										?>											
 									</div>
 
-									<li>New Password: <input type="password" name="userNewPassword"></li>
+									<li class="show-password">New Password: <input type="password" name="userNewPassword"></li>
+									<i class="fa fa-eye eye-icon-small"></i>
 									<div class="red-text edit-error">
 										<?php 
 											if(isset($_SESSION['userNewPasswordError'])) {
@@ -34,7 +36,8 @@
 										?>	
 									</div>
 
-									<li>Confirm New Password: <input type="password" name="userConfirmNewPassword"></li>
+									<li class="show-password">Confirm New Password: <input type="password" name="userConfirmNewPassword"></li>
+									<i class="fa fa-eye eye-icon-small"></i>
 									<div class="red-text edit-error">
 										<?php 
 											if(isset($_SESSION['userConfirmNewPasswordError'])) {
