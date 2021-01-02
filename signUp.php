@@ -32,7 +32,7 @@
       </form>
       <div class="sign-up">
         <p>Already Registered ?</p>
-        <a href="login.php">Sign In</a>
+        <a href="signIn.php">Sign In</a>
       </div> 
     </div>
   </div>

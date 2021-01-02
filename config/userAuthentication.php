@@ -2,7 +2,7 @@
 
 	if (!$_SESSION['userAuthenticated']) {
 		session_destroy();
-		header('Location: login.php');
+		header('Location: signIn.php');
 	}
 
 ?>

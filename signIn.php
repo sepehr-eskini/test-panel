@@ -17,6 +17,11 @@
         <input type="password" name="password" placeholder="Password">
         <div class="red-text"><?php echo ($_SESSION['inputPasswordError'] ?? ''); ?></div>
 
+        <select name="userType">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+
         <input class="button" type="submit" name="sign-in" value="Sign In">
       </form>
       <div class="sign-up">

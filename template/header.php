@@ -13,11 +13,21 @@
 	<div class="container">
 		<div class="section">
 			<div class="panel-home">
+				<?php if($_SESSION['userType'] == 'user') { ?>
 				<ul>
 					<li class="right"><a href="config/logOutHandler.php">Log Out</a></li>
 					<li class="right"><a href="panel_changePassword.php">Change Password</a></li>
 					<li class="left">User: <?php echo htmlspecialchars($_SESSION['userFirstname']) . ' ' . htmlspecialchars($_SESSION['userLastname']); ?></li>
-			</ul>
+				</ul>
+				<?php } ?>
+
+				<?php if($_SESSION['userType'] == 'admin') { ?>
+				<ul>
+					<li class="right"><a href="config/logOutHandler.php">Log Out</a></li>
+					<li class="right"><a href="panel_changePassword.php">Change Password</a></li>
+					<li class="left">Admin: <?php echo htmlspecialchars($_SESSION['userFirstname']) . ' ' . htmlspecialchars($_SESSION['userLastname']); ?></li>
+				</ul>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

@@ -71,7 +71,7 @@
 			$stmt->bindParam(':nationalcode', $_SESSION['nationalCode']);
 			$stmt->bindParam(':password', $_SESSION['password']);
 			$stmt->execute();
-			header('Location: ../login.php');
+			header('Location: ../signIn.php');
 			session_unset();
 		}
 	}

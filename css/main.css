@@ -91,7 +91,7 @@ a {
   text-align: center;
 }
 
-.login form input {
+.login form input, .login form select {
   padding: 10px 0;
   border: 1px solid #1fff93;
   border-radius: 5px;
@@ -99,6 +99,10 @@ a {
   margin: 10px auto;
   text-align: center;
   display: block;
+}
+
+.login form select option {
+  text-align: center;
 }
 
 .login form input:focus {
@@ -250,4 +254,14 @@ input.button:hover {
 
 .not-found {
   padding: 10px;
+}
+
+i.remove-icon {
+  font-size: 20px; 
+  color: red;
+}
+
+i.edit-icon {
+  font-size: 20px;
+  color: black;
 }
