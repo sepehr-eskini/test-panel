@@ -4,6 +4,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Login</title>
 </head>
 <body>
@@ -11,7 +12,9 @@
     <div class="login">
       <form action="config/signUpFormHandler.php" method="POST">
         <input type="text" name="firstname" placeholder="First Name" value="<?php if(isset($_SESSION['firstName'])) {echo htmlspecialchars($_SESSION['firstName']);} ?>">
-        <div class="red-text"><?php echo ($_SESSION['firstNameError'] ?? ''); ?></div>
+        <div class="red-text">
+
+        </div>
 
         <input type="text" name="lastname" placeholder="Last Name" value="<?php if(isset($_SESSION['lastName'])) {echo htmlspecialchars($_SESSION['lastName']);} ?>">
         <div class="red-text"><?php echo ($_SESSION['lastNameError'] ?? ''); ?></div>
@@ -39,4 +42,4 @@
 </body>
 </html>
 
-<?php session_unset(); ?>
+<?php session_destroy(); ?>

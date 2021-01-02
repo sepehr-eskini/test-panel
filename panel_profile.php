@@ -2,7 +2,8 @@
 <html>
 
 	<?php include 'template/header.php'; ?>
-
+	<?php echo isset($_SESSION['inputUsername']); ?>
+	
 	<div class="container">
 		<div class="section">
 			<div class="row">

@@ -72,7 +72,7 @@
 			$stmt->bindParam(':password', $_SESSION['password']);
 			$stmt->execute();
 			header('Location: ../signIn.php');
-			session_unset();
+			session_destroy();
 		}
 	}
 

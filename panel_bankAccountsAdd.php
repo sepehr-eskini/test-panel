@@ -33,8 +33,15 @@
 
 									<li> 
 										Bank Account Number:
-										<input type="text" name="bankAccountNumber" value="<?php if(isset($_SESSION['bankAccountNumberAdd'])) {echo htmlspecialchars($_SESSION['bankAccountNumberAdd']);} ?>">
-										<div class="red-text edit-error"><?php echo ($_SESSION['bankAccountNumberAddError'] ?? ''); ?></div>
+										<input type="text" name="bankAccountNumber" value="<?php if(isset($_SESSION['bankAccountNumberAdd'])) {echo htmlspecialchars($_SESSION['bankAccountNumberAdd']); unset($_SESSION['bankAccountNumberAdd']);} ?>">
+										<div class="red-text edit-error">
+											<?php 
+												if(isset($_SESSION['bankAccountNumberAddError'])) {
+													echo $_SESSION['bankAccountNumberAddError'];
+													unset($_SESSION['bankAccountNumberAddError']);
+												}
+											?>	
+										</div>
 									</li>
 
 									<li><input type="submit" name="bankAccountsAddSubmit"></li>
@@ -48,9 +55,5 @@
 	</div>
 
 	<?php include 'template/footer.php'; ?>
-	<?php
-	  unset($_SESSION['bankAccountNumberAdd']);
-	  unset($_SESSION['bankAccountNumberAddError']);
-	?>
 
 </html>

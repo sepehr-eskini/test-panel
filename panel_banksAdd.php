@@ -24,8 +24,15 @@
 								<ul>
 									<li> 
 										Bank Name:
-										<input type="text" name="bankName" value="<?php if(isset($_SESSION['bankNameAdd'])) {echo htmlspecialchars($_SESSION['bankNameAdd']);} ?>">
-										<div class="red-text edit-error"><?php echo ($_SESSION['bankNameAddError'] ?? ''); ?></div>
+										<input type="text" name="bankName" value="<?php if(isset($_SESSION['bankNameAdd'])) {echo htmlspecialchars($_SESSION['bankNameAdd']); unset($_SESSION['bankNameAdd']);} ?>">
+										<div class="red-text edit-error">
+											<?php 
+												if(isset($_SESSION['bankNameAddError'])) {
+													echo $_SESSION['bankNameAddError'];
+													unset($_SESSION['bankNameAddError']);
+												}
+											?>
+										</div>
 									</li>
 									<li><input type="submit" name="bankNameAddSubmit"></li>
 								</ul>
@@ -38,9 +45,5 @@
 	</div>
 
 	<?php include 'template/footer.php'; ?>
-	<?php
-	  unset($_SESSION['bankNameAdd']);
-	  unset($_SESSION['bankNameAddError']);
-	?>
 
 </html>

@@ -15,13 +15,34 @@
 							<form action="config/changePasswordHandler.php" method="POST">
 								<ul>
 									<li>Current Password: <input type="password" name="userCurrentPassword"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userCurrentPasswordError'] ?? ''); ?></div>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userCurrentPasswordError'])) {
+												echo $_SESSION['userCurrentPasswordError'];
+												unset($_SESSION['userCurrentPasswordError']);
+											}
+										?>											
+									</div>
 
 									<li>New Password: <input type="password" name="userNewPassword"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userNewPasswordError'] ?? ''); ?></div>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userNewPasswordError'])) {
+												echo $_SESSION['userNewPasswordError'];
+												unset($_SESSION['userNewPasswordError']);
+											}
+										?>	
+									</div>
 
 									<li>Confirm New Password: <input type="password" name="userConfirmNewPassword"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userConfirmNewPasswordError'] ?? ''); ?></div>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userConfirmNewPasswordError'])) {
+												echo $_SESSION['userConfirmNewPasswordError'];
+												unset($_SESSION['userConfirmNewPasswordError']);
+											}
+										?>
+									</div>
 
 									<li><input type="submit" name="changePasswordSubmit"></li>
 								</ul>

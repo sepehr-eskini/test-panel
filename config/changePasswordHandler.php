@@ -45,6 +45,13 @@
 			$stmt->execute();
 			$_SESSION['userPassword'] = $_SESSION['userNewPassword'];
 
+			unset($_SESSION['userCurrentPassword']);
+			unset($_SESSION['userNewPassword']);
+			unset($_SESSION['userConfirmNewPassword']);
+			unset($_SESSION['userCurrentPasswordError']);
+			unset($_SESSION['userNewPasswordError']);
+			unset($_SESSION['userConfirmNewPasswordError']);
+
 			header('Location: ../panel_profile.php');
 		}
 	}

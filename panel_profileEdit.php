@@ -15,17 +15,45 @@
 							<a href="panel_profile.php" class="button"><i class="fa fa-arrow-left"></i> Profile</a>
 							<form action="config/profileEditHandler.php" method="POST">
 								<ul>
-									<li>First Name: <input type="text" name="userFirstnameEdit" value="<?php echo ($_SESSION['userFirstnameEdit'] ?? $_SESSION['userFirstname']); ?>"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userFirstnameEditError'] ?? ''); ?></div>
+									<li>First Name: <input type="text" name="userFirstnameEdit" value="<?php if(isset($_SESSION['userFirstnameEdit'])) {echo $_SESSION['userFirstnameEdit']; unset($_SESSION['userFirstnameEdit']);} else {echo $_SESSION['userFirstname'];} ?>"></li>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userFirstnameEditError'])) {
+												echo $_SESSION['userFirstnameEditError'];
+												unset($_SESSION['userFirstnameEditError']);
+											}
+										?>
+									</div>
 
-									<li>Last Name: <input type="text" name="userLastnameEdit" value="<?php echo ($_SESSION['userLastnameEdit'] ?? $_SESSION['userLastname']); ?>"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userLastnameEditError'] ?? ''); ?></div>
+									<li>Last Name: <input type="text" name="userLastnameEdit" value="<?php if(isset($_SESSION['userLastnameEdit'])) {echo $_SESSION['userLastnameEdit']; unset($_SESSION['userLastnameEdit']);} else {echo $_SESSION['userLastname'];} ?>"></li>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userLastnameEditError'])) {
+												echo $_SESSION['userLastnameEditError'];
+												unset($_SESSION['userLastnameEditError']);
+											}
+										?>
+									</div>
 
-									<li>National Code: <input type="text" name="userNationalCodeEdit" value="<?php echo ($_SESSION['userNationalCodeEdit'] ?? $_SESSION['userNationalCode']); ?>"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userNationalCodeEditError'] ?? ''); ?></div>
+									<li>National Code: <input type="text" name="userNationalCodeEdit" value="<?php if(isset($_SESSION['userNationalCodeEdit'])) {echo $_SESSION['userNationalCodeEdit']; unset($_SESSION['userNationalCodeEdit']);} else {echo $_SESSION['userNationalCode'];} ?>"></li>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userNationalCodeEditError'])) {
+												echo $_SESSION['userNationalCodeEditError'];
+												unset($_SESSION['userNationalCodeEditError']);
+											}
+										?>
+									</div>
 
-									<li>Email: <input type="text" name="userEmailEdit" value="<?php echo ($_SESSION['userEmailEdit'] ?? $_SESSION['userEmail']); ?>"></li>
-									<div class="red-text edit-error"><?php echo ($_SESSION['userEmailEditError'] ?? ''); ?></div>
+									<li>Email: <input type="text" name="userEmailEdit" value="<?php if(isset($_SESSION['userEmailEdit'])) {echo $_SESSION['userEmailEdit']; unset($_SESSION['userEmailEdit']);} else {echo $_SESSION['userEmail'];} ?>"></li>
+									<div class="red-text edit-error">
+										<?php 
+											if(isset($_SESSION['userEmailEditError'])) {
+												echo $_SESSION['userEmailEditError'];
+												unset($_SESSION['userEmailEditError']);
+											}
+										?>
+									</div>
 
 									<li>Registration Date: <?php echo htmlspecialchars($_SESSION['userRegisterTs']); ?></li>
 									<li><input type="submit" name="profileEditSubmit"></li>

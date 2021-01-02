@@ -36,6 +36,7 @@
 			$stmt->bindParam(':bank_id', $_SESSION['bankIdEdit']);
 			$stmt->execute();
 			unset($_SESSION['bankNameEdit']);
+			unset($_SESSION['bankNameEditError']);
 			unset($_SESSION['bankIdEdit']);
 
 			header('Location: ../panel_banks.php');

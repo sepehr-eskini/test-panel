@@ -265,3 +265,16 @@ i.edit-icon {
   font-size: 20px;
   color: black;
 }
+
+#show-password {
+  display: inline-block;
+}
+
+i.eye-icon {
+  cursor: pointer;
+  margin-left: -30px;
+  position: absolute;
+  line-height: 57px;
+  font-size: 20px;
+  color: black;
+}
